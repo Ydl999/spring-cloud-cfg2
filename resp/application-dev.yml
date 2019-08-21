@@ -1,0 +1,15 @@
+server: 
+  port: 8082
+eureka: 
+  instance: 
+    hostname: localhost      #eureka服务端实例名称
+  client: 
+    service-url: 
+      defaultZone: http://${eureka.instance.hostname}:8011/eureka/     #设置与eureka server交互的地址查询服务和注册服务都需要依赖这个地址  
+spring: 
+  application: 
+    name: microservicecloudB-consumer-80                                #服务名称
+  
+feign: 
+  hystrix: 
+    enabled: true
